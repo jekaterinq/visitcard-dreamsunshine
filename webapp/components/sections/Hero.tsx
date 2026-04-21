@@ -12,7 +12,7 @@ export default function Hero() {
             Косметолог-нутрициолог
           </p>
 
-          <h1 className="text-3xl md:text-5xl font-medium leading-tight text-[#1f1f1f]">
+          <h1 className="text-3xl md:text-5xl font-medium leading-tight text-[#4c4a4a]">
             Грамотная косметология без хаоса, экспериментов и бесконечных трат.
           </h1>
 

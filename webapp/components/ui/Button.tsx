@@ -18,13 +18,13 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-[#eae5dd] text-[#1f1f1f] hover:bg-[#e1dbd2] focus:ring-[#c6a96b]",
+      "bg-[#c9a86c] text-ml text-white hover:bg-[#c8d8c0] hover:text-[#1f1f1f] focus:ring-[#c9a86c] shadow-sm cursor-pointer",
 
     secondary:
-      "bg-[#f3efe9] text-[#1f1f1f] hover:bg-[#eae5dd] focus:ring-[#c6a96b]",
+      "bg-[#f3efe9] text-[#1f1f1f] hover:bg-[#eae5dd] focus:ring-[#c9a86c]",
 
     outline:
-      "border border-[#e5e1da] text-[#1f1f1f] bg-transparent hover:bg-[#f3efe9] focus:ring-[#c6a96b]",
+      "border border-[#c9a86c] text-[#1f1f1f] bg-transparent hover:bg-[#f3efe9] focus:ring-[#c9a86c]",
   };
 
   const sizes = {
