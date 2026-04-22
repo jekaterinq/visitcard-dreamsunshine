@@ -148,7 +148,7 @@ export default function Cases() {
 
               <div className="relative w-100 h-70 overflow-hidden rounded-xl">
                 <Image
-                  src="/images/after-second-case.png"
+                  src="/images/after-second-case.PNG"
                   alt="после"
                   fill
                   className="object-cover"
