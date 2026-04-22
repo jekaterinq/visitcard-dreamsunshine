@@ -8,7 +8,7 @@ export default function About() {
         
         <div className="aspect-3/4 w-full overflow-hidden rounded-2xl">
           <Image
-            src="/images/about-anna-photo.jpg"
+            src="/images/about-anna.jpg"
             alt="Анна косметолог"
             width={600}
             height={700}
