@@ -20,35 +20,35 @@ export default function RootLayout({
         <div className="flex">
           
           {/* SIDEBAR */}
-          <aside className="hidden md:flex fixed left-0 top-0 h-full w-56 px-6 py-10 flex-col justify-between">
+          <aside className="hidden md:flex fixed left-0 top-0 h-full w-50 px-6 py-10 flex-col justify-between">
             
             <nav className="space-y-3 text-sm">
-              <a href="#about" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#7a9c8f] transition">
+              <a href="#about" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#C8D8C0] transition">
                 <img src="/icons/about.svg" alt="" className="w-4 h-4 opacity-70! group-hover:opacity-100" />
                 Обо мне
               </a>
 
-              <a href="#problems" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#7a9c8f] transition">
+              <a href="#problems" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#C8D8C0] transition">
                 <img src="/icons/problems.svg" alt="" className="w-4 h-4 opacity-70! group-hover:opacity-100" />
                 Проблемы
               </a>
 
-              <a href="#approach" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#7a9c8f] transition">
+              <a href="#approach" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#C8D8C0] transition">
                 <img src="/icons/approach.svg" alt="" className="w-4 h-4 opacity-70! group-hover:opacity-100" />
                 Подход
               </a>
 
-              <a href="#cases" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#7a9c8f] transition">
+              <a href="#cases" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#C8D8C0] transition">
                 <img src="/icons/cases.svg" alt="" className="w-4 h-4 opacity-70! group-hover:opacity-100" />
                 Результаты
               </a>
 
-              <a href="#why" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#7a9c8f] transition">
+              <a href="#why" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#C8D8C0] transition">
                 <img src="/icons/why.svg" alt="" className="w-4 h-4 opacity-70! group-hover:opacity-100" />
                 Почему я
               </a>
 
-              <a href="#faq" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#7a9c8f] transition">
+              <a href="#faq" className="group flex items-center gap-2 text-[#6b6b6b] hover:text-[#C8D8C0] transition">
                 <img src="/icons/faq.svg" alt="" className="w-4 h-4 opacity-70! group-hover:opacity-100" />
                 Вопросы
               </a>

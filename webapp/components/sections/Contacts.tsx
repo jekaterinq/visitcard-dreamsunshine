@@ -3,7 +3,7 @@ import { Button } from "../ui/Button";
 export default function Contacts() {
   return (
     <section id="contacts" className="py-24 bg-[#f3efe9]">
-      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center ">
 
         {/* Левая часть */}
         <div>
@@ -20,7 +20,7 @@ export default function Contacts() {
             <a
               href="https://www.instagram.com/dreamshine_studio/"
               target="_blank"
-              className="ml-2 text-[#7a9c8f] hover:underline font-medium"
+              className="ml-2 text-[#8e947f] hover:underline font-medium"
             >
               @dreamshine_studio
             </a>

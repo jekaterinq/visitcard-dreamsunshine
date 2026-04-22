@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function Why() {
   const points = [
@@ -11,9 +12,37 @@ export default function Why() {
   ];
 
   return (
-    <section id="why" className="py-24 bg-[#f8f6f2]">
-      <div className="max-w-3xl mx-auto px-4 text-center">
+    <section id="why" className="py-24 bg-[#f8f6f2] relative overflow-hidden">
 
+      <div className="hidden lg:block">
+
+        <Image
+          src="/images/comment-test.jpg"
+          alt=""
+          width={220}
+          height={120}
+          className="absolute left-10 top-20 -rotate-6 shadow-md rounded-xl"
+        />
+
+        <Image
+          src="/images/comment-test.jpg"
+          alt=""
+          width={220}
+          height={120}
+          className="absolute left-20 top-52 rotate-3 shadow-md rounded-xl"
+        />
+
+        <Image
+          src="/images/comment-test.jpg"
+          alt=""
+          width={220}
+          height={120}
+          className="absolute left-5 top-96 -rotate-2 shadow-md rounded-xl"
+        />
+
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
 
         <h2 className="text-3xl md:text-4xl font-medium text-[#4c4a4a]">
           Почему выбирают меня
@@ -63,8 +92,34 @@ export default function Why() {
             <Button>Записаться на консультацию</Button>
           </a>
         </div>
-
       </div>
+      <div className="hidden lg:block">
+
+          <Image
+            src="/images/comment-test.jpg"
+            alt=""
+            width={220}
+            height={120}
+            className="absolute right-10 top-32 rotate-3 shadow-md rounded-xl"
+          />
+
+          <Image
+            src="/images/comment-test.jpg"
+            alt=""
+            width={220}
+            height={120}
+            className="absolute right-20 top-72 rotate-[-4deg] shadow-md rounded-xl"
+          />
+
+          <Image
+            src="/images/comment-test.jpg"
+            alt=""
+            width={220}
+            height={120}
+            className="absolute right-5 top-130 rotate-2 shadow-md rounded-xl"
+          />
+
+        </div>
     </section>
   );
 }

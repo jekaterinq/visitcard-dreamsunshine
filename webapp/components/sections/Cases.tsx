@@ -16,26 +16,30 @@ export default function Cases() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
 
             {/* Фото */}
-            <div className="flex flex-col gap-6">
-              <div>
+            <div className="flex flex-col gap-6 items-center">
+
+              {/* ДО */}
+              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
                 <Image
-                  src="/images/before-test.png"
+                  src="/images/before-first-case.jpg"
                   alt="до"
-                  width={500}
-                  height={500}
-                  className="rounded-xl object-cover w-full h-auto"
+                  fill
+                  className="object-cover"
+                  unoptimized
                 />
               </div>
 
-              <div>
+              {/* ПОСЛЕ */}
+              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
                 <Image
-                  src="/images/after-test.png"
+                  src="/images/after-first-case.jpg"
                   alt="после"
-                  width={500}
-                  height={500}
-                  className="rounded-xl object-cover w-full h-auto"
+                  fill
+                  className="object-cover"
+                  unoptimized
                 />
               </div>
+
             </div>
 
             {/* Текст */}
@@ -89,7 +93,7 @@ export default function Cases() {
             {/* Текст */}
             <div className="md:order-1">
               <h3 className="text-xl! font-medium text-[#4c4a4a]!">
-                Восстановление чувствительной кожи
+                Чувствительная кожа и воспаления — результат без процедур
               </h3>
 
               <p className="mt-6 font-medium">
@@ -97,9 +101,9 @@ export default function Cases() {
               </p>
 
               <ul className="mt-3 space-y-2 text-[#6b6b6b]">
-                <li>— Реакция на любые средства и внешние факторы</li>
-                <li>— Жжение после умывания</li>
-                <li>— Страх менять уход из-за негативного опыта</li>
+                <li>— Более года беспокоили воспаления и забитые поры</li>
+                <li>— Покраснения после высыпаний и чувствительность кожи</li>
+                <li>— Хаотичный уход без понимания, что подходит коже</li>
               </ul>
 
               <p className="mt-6 font-medium text-[#c6a96b]! text-xl!">
@@ -109,46 +113,46 @@ export default function Cases() {
               <ul className="mt-3 space-y-2 text-[#6b6b6b] text-l!" >
                 <li className="flex gap-2">
                   <span className="text-[#c6a96b]">✔</span>
-                  Покраснения снижены на 80%
+                  Воспаления сократились, кожа стала чище
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#c6a96b]">✔</span>
-                  Кожа перестала «гореть»
+                  Покраснения снижены до 90%, кожа перестала “гореть”
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#c6a96b]">✔</span>
-                  Подобран мягкий уход
+                  Пятна пост-акне заметно осветлились
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#c6a96b]">✔</span>
-                  Появился комфорт и уверенность
+                  Подобрана простая система ухода с доступными средствами
                 </li>
               </ul>
 
               <p className="mt-6 italic text-[#6b6b6b]!">
-                «Я думала, что у меня просто такая кожа. Теперь понимаю, что проблема была в уходе. Спасибо Ане за индивидуальный подход.»
+                «ЗДЕСЬ НОВЫЙ КОММЕНТАРИЙ»
               </p>
             </div>
 
              {/* Фото */}
-            <div className="flex flex-col gap-4 md:order-1 items-start">
-              <div>
+            <div className="flex flex-col gap-4 md:order-1 items-start ">
+              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
                 <Image
-                  src="/images/before-test.png"
+                  src="/images/before-second-case.jpg"
                   alt="до"
-                  width={500}
-                  height={500}
-                  className="rounded-xl object-cover w-full h-auto"
+                  fill
+                  className="object-cover"
+                  unoptimized
                 />
               </div>
 
-              <div>
+              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
                 <Image
-                  src="/images/after-test.png"
+                  src="/images/after-second-case.png"
                   alt="после"
-                  width={500}
-                  height={500}
-                  className="rounded-xl object-cover w-full h-auto"
+                  fill
+                  className="object-cover"
+                  unoptimized
                 />
               </div>
             </div>

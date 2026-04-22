@@ -6,13 +6,13 @@ export default function About() {
     <section id="about" className="py-24 bg-[#f8f6f2]">
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
         
-        <div>
+        <div className="aspect-3/4 w-full overflow-hidden rounded-2xl">
           <Image
-            src="/images/about-test.jpg"
+            src="/images/about-anna-photo.jpg"
             alt="Анна косметолог"
             width={600}
             height={700}
-            className="w-full h-130 object-cover rounded-2xl"
+            className="object-cover"
           />
         </div>
 
