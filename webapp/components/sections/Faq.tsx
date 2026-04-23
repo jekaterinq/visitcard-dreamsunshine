@@ -28,38 +28,64 @@ export default function FAQ() {
     },
   ];
 
+  const step = 140; // 🔥 расстояние между элементами
+
+  const left = [
+    { src: "/images/question-mark.png", i: 0, rotate: "-rotate-6", x: "left-4", size: "w-[110px]" },
+    { src: "/images/comment-mark.png", i: 1, rotate: "rotate-6", x: "left-10", size: "w-[80px]" },
+    { src: "/images/question-mark.png", i: 2, rotate: "-rotate-3", x: "left-2", size: "w-[100px]" },
+    { src: "/images/comment-mark.png", i: 3, rotate: "rotate-3", x: "left-8", size: "w-[75px]" },
+  ];
+
+  const right = [
+    { src: "/images/comment-mark.png", i: 0, rotate: "rotate-6", x: "right-6", size: "w-[80px]" },
+    { src: "/images/question-mark.png", i: 1, rotate: "-rotate-6", x: "right-8", size: "w-[110px]" },
+    { src: "/images/comment-mark.png", i: 2, rotate: "rotate-3", x: "right-4", size: "w-[75px]" },
+    { src: "/images/question-mark.png", i: 3, rotate: "-rotate-2", x: "right-2", size: "w-[95px]" },
+  ];
+
   return (
     <section className="py-24 bg-[#f8f6f2] relative overflow-hidden">
 
       {/* LEFT */}
-      <div className="hidden lg:block">
-        <Image
-          src="/images/question-mark-faq.png"
-          alt=""
-          width={120}
-          height={70}
-          className="absolute left-4 top-16 -rotate-6 opacity-60"
-        />
+      <div className="hidden lg:block absolute inset-0 pointer-events-none">
+        <div className="max-w-5xl mx-auto relative h-full">
 
-        <Image
-          src="/images/comment-mark-faq.png"
-          alt=""
-          width={100}
-          height={60}
-          className="absolute left-10 top-62 rotate-6 opacity-60"
-        />
+          {left.map((item, idx) => (
+            <Image
+              key={idx}
+              src={item.src}
+              alt=""
+              width={300}
+              height={300}
+              style={{ top: `${item.i * step + 100}px` }}
+              className={`absolute ${item.x} ${item.rotate} ${item.size} opacity-60`}
+            />
+          ))}
 
-        <Image
-          src="/images/question-mark-faq.png"
-          alt=""
-          width={110}
-          height={65}
-          className="absolute left-6 top-115 -rotate-3 opacity-60"
-        />
+        </div>
+      </div>
+
+      {/* RIGHT */}
+      <div className="hidden lg:block absolute inset-0 pointer-events-none">
+        <div className="max-w-5xl mx-auto relative h-full">
+
+          {right.map((item, idx) => (
+            <Image
+              key={idx}
+              src={item.src}
+              alt=""
+              width={300}
+              height={300}
+              style={{ top: `${item.i * step + 100}px` }}
+              className={`absolute ${item.x} ${item.rotate} ${item.size} opacity-60`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* CONTENT */}
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-3xl mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-medium text-center text-[#4c4a4a]">
           Частые вопросы
         </h2>
@@ -80,33 +106,6 @@ export default function FAQ() {
             </details>
           ))}
         </div>
-      </div>
-
-      {/* RIGHT */}
-      <div className="hidden lg:block">
-        <Image
-          src="/images/comment-mark-faq.png"
-          alt=""
-          width={100}
-          height={60}
-          className="absolute right-6 top-24 rotate-6 opacity-60"
-        />
-
-        <Image
-          src="/images/question-mark-faq.png"
-          alt=""
-          width={120}
-          height={70}
-          className="absolute right-8 top-80 -rotate-6 opacity-60"
-        />
-
-        <Image
-          src="/images/comment-mark-faq.png"
-          alt=""
-          width={100}
-          height={60}
-          className="absolute right-4 top-[520px] rotate-3 opacity-60"
-        />
       </div>
 
     </section>
