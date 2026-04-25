@@ -41,6 +41,8 @@ export default function Why() {
     "/images/comments/comment-6.jpg",
     "/images/comments/comment-7.jpg",
     "/images/comments/comment-8.jpg",
+    "/images/comments/comment-9.jpg",
+    "/images/comments/comment-10.jpg",
   ];
 
   const sliderRef = useRef<HTMLDivElement>(null);

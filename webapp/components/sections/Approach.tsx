@@ -28,7 +28,7 @@ export default function Approach() {
           Как проходит работа
         </h2>
 
-        <div className="mt-14 grid md:grid-cols-2 gap-8 text-left">
+        <div className="mt-14 grid md:grid-cols-2 gap-8 text-left bg-[#f3efe9] p-8 rounded-2xl">
           {steps.map((step, i) => (
             <div
               key={i}

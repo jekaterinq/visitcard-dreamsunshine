@@ -33,7 +33,7 @@ export default function Problems() {
       id="problems"
       className="py-24 bg-[url('/images/background-problems.png')] bg-cover bg-center"
     >
-      <div className="max-w-3xl mx-auto px-4 text-center bg-[#f3efe9]/50 p-8 rounded-2xl">
+      <div className="max-w-3xl mx-auto px-4 text-center bg-[#f3efe9]/60 p-8 rounded-2xl">
         <h2 className="text-3xl md:text-4xl font-medium text-[#4c4a4a]">
           Кажется, вы уже перепробовали всё?
         </h2>

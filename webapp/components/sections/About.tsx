@@ -28,12 +28,15 @@ export default function About() {
             большинство проблем с кожей возникают не из-за «плохой» генетики, а из-за
             отсутствия правильно выстроенной системы ухода.
           </p>
+          <p className="mt-4 text-[#6b6b6b] leading-relaxed">
+            Я сама была в этом хаосе: бесконечные эксперименты, смена средств, дорогие баночки и нулевой результат. 
+            Поэтому я не верю в случайные решения и «волшебные» продукты. Подрообнее об этом я рассказывала здесь: <a href="https://www.instagram.com/stories/highlights/18111735922488214/" target="_blank" className="text-[#7a9c8f] underline strong">Моя история</a>
+          </p>
 
           <p className="mt-4 text-[#6b6b6b] leading-relaxed">
           Как нутрициолог, я понимаю, что
           кожа — это отражение внутренних процессов. Поэтому в работе всегда учитываю 
-          <strong> питание, образ жизни, гормональный фон и индивидуальные реакции организма</strong>. Я не
-          верю в хаотичную смену средств и бесконечные эксперименты.
+          <strong> питание, образ жизни, гормональный фон и индивидуальные реакции организма</strong>.
           </p>
 
           <p className="mt-4 text-[#6b6b6b] leading-relaxed">
@@ -55,7 +58,7 @@ export default function About() {
           </p>
 
 
-          <div className="mt-8">
+          <div className="mt-12 text-center">
             <a href="https://apnt.app/anna_dreamshine" target="_blank">
               <Button>Записаться на консультацию</Button>
             </a>

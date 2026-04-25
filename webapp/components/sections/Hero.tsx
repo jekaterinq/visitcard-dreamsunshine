@@ -9,7 +9,7 @@ export default function Hero() {
         {/* КОНТЕНТ */}
         <div className="relative max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center py-16 ">
           
-          <div className="bg-[#f3efe9]/50 p-8 rounded-2xl">
+          <div className="bg-[#f3efe9]/60 p-8 rounded-2xl">
             <p className="text-sm text-[#7a9c8f] mb-4">
               Косметолог-нутрициолог
             </p>
@@ -30,20 +30,6 @@ export default function Hero() {
           </div>
 
         </div>
-
-
-        {/* Фото */}
-        {/*<div className="relative">
-          <div className="absolute inset-0 bg-[#dfe8e4]/40 rounded-2xl"></div>
-
-          <Image
-            src="/images/background-hero.jpg"
-            alt="фон для секции Hero"
-            width={600}
-            height={700}
-            className="relative w-full h-130 object-cover rounded-2xl"
-          />
-        </div>*/}
 
       </div>
     </section>
