@@ -19,7 +19,7 @@ export default function Cases() {
             <div className="flex flex-col gap-6 items-center">
 
               {/* ДО */}
-              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
+              <div className="relative w-full max-w-[400px] aspect-[3/2] overflow-hidden rounded-xl mx-auto">
                 <Image
                   src="/images/before-first-case.jpg"
                   alt="до"
@@ -29,8 +29,7 @@ export default function Cases() {
                 />
               </div>
 
-              {/* ПОСЛЕ */}
-              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
+              <div className="relative w-full max-w-[400px] aspect-[3/2] overflow-hidden rounded-xl mx-auto">
                 <Image
                   src="/images/after-first-case.jpg"
                   alt="после"
@@ -136,7 +135,7 @@ export default function Cases() {
 
              {/* Фото */}
             <div className="flex flex-col gap-4 md:order-1 items-start ">
-              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
+              <div className="relative w-full max-w-[400px] aspect-[3/2] overflow-hidden rounded-xl mx-auto">
                 <Image
                   src="/images/before-second-case.jpg"
                   alt="до"
@@ -146,9 +145,9 @@ export default function Cases() {
                 />
               </div>
 
-              <div className="relative w-100 h-70 overflow-hidden rounded-xl">
+              <div className="relative w-full max-w-[400px] aspect-[3/2] overflow-hidden rounded-xl mx-auto">
                 <Image
-                  src="/images/after-second-case.PNG"
+                  src="/images/after-second-case.jpg"
                   alt="после"
                   fill
                   className="object-cover"

@@ -14,7 +14,6 @@ export default function RootLayout({
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // ❌ без useEffect
   const isOtherPage =
     pathname === "/privacy" || pathname.startsWith("/privacy/");
 

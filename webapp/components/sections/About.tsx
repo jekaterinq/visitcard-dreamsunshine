@@ -30,7 +30,7 @@ export default function About() {
           </p>
           <p className="mt-4 text-[#6b6b6b] leading-relaxed">
             Я сама была в этом хаосе: бесконечные эксперименты, смена средств, дорогие баночки и нулевой результат. 
-            Поэтому я не верю в случайные решения и «волшебные» продукты. Подрообнее об этом я рассказывала здесь: <a href="https://www.instagram.com/stories/highlights/18111735922488214/" target="_blank" className="text-[#7a9c8f] underline strong">Моя история</a>
+            Поэтому я не верю в случайные решения и «волшебные» продукты. Подрообнее об этом я рассказывала здесь: <a href="https://www.instagram.com/stories/highlights/18111735922488214/" target="_blank" className="text-[#7a9c8f] underline"><strong>Моя история</strong></a>
           </p>
 
           <p className="mt-4 text-[#6b6b6b] leading-relaxed">
