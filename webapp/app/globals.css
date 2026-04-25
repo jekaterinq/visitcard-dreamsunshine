@@ -94,3 +94,30 @@ p {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+/* ===== АНИМАЦИИ ===== */
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-vertical {
+  animation: verticalScroll 45s linear infinite;
+}
+
+.animate-vertical:hover {
+  animation-play-state: paused;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

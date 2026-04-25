@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
+import { useRef, useState } from "react";
 
 export default function Why() {
   const points = [
@@ -29,67 +32,42 @@ export default function Why() {
     },
   ];
 
-  const left = [
-    { src: "/images/comment-test.jpg", y: -220, rotate: "-rotate-6", x: "left-4" },
-    { src: "/images/comment-test.jpg", y: 0, rotate: "rotate-3", x: "left-10" },
-    { src: "/images/comment-test.jpg", y: 220, rotate: "-rotate-3", x: "left-6" },
+  const comments = [
+    "/images/comments/comment-1.jpg",
+    "/images/comments/comment-2.jpg",
+    "/images/comments/comment-3.jpg",
+    "/images/comments/comment-4.jpg",
+    "/images/comments/comment-5.jpg",
+    "/images/comments/comment-6.jpg",
+    "/images/comments/comment-7.jpg",
+    "/images/comments/comment-8.jpg",
   ];
 
-  const right = [
-    { src: "/images/comment-test.jpg", y: -200, rotate: "rotate-3", x: "right-4" },
-    { src: "/images/comment-test.jpg", y: 40, rotate: "-rotate-4", x: "right-10" },
-    { src: "/images/comment-test.jpg", y: 240, rotate: "rotate-2", x: "right-6" },
-  ];
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+
+    const scrollLeft = sliderRef.current.scrollLeft;
+    const width = sliderRef.current.clientWidth * 0.8;
+
+    const index = Math.round(scrollLeft / width);
+    setActive(index);
+  };
 
   return (
-    <section id="why" className="py-24 bg-[#f8f6f2] relative overflow-visible">
+    <section id="why" className="py-24 bg-[#f8f6f2]">
 
-      {/* DECOR */}
-      <div className="hidden lg:block absolute inset-0 pointer-events-none">
-        <div className="relative w-full h-full px-[18%]">
-
-          {left.map((item, idx) => (
-            <Image
-              key={idx}
-              src={item.src}
-              alt=""
-              width={220}
-              height={120}
-              style={{
-                top: "50%",
-                transform: `translateY(-50%) translateY(${item.y}px)`
-              }}
-              className={`absolute ${item.x} ${item.rotate} shadow-md rounded-xl w-[12vw] min-w-[140px] max-w-[400px] h-auto`}
-            />
-          ))}
-
-          {right.map((item, idx) => (
-            <Image
-              key={idx}
-              src={item.src}
-              alt=""
-              width={220}
-              height={120}
-              style={{
-                top: "50%",
-                transform: `translateY(-50%) translateY(${item.y}px)`
-              }}
-              className={`absolute ${item.x} ${item.rotate} shadow-md rounded-xl w-[12vw] min-w-[140px] max-w-[400px] h-auto`}
-            />
-          ))}
-
-        </div>
-      </div>
-
-      {/* CONTENT */}
-      <div className="max-w-3xl mx-auto px-4 relative z-10">
-        <div className="bg-[#f3efe9]/50 p-8 md:p-10 rounded-2xl backdrop-blur-sm">
-
-          <h2 className="text-3xl md:text-4xl font-medium text-[#4c4a4a] text-center">
+      <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-[60%_40%] gap-12 items-start">
+          
+        {/* LEFT */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-medium text-[#4c4a4a] text-center lg:text-left">
             Почему выбирают меня
           </h2>
 
-          <p className="mt-6 text-[#6b6b6b] leading-relaxed text-center">
+          <p className="mt-6 text-[#6b6b6b] leading-relaxed text-center lg:text-left">
             За годы практики я поняла: коже не нужен хаотичный набор средств.
             <br />
             Ей нужен грамотный, понятный и бережный план действий, подобранный под конкретную ситуацию. Именно так я и работаю.
@@ -129,13 +107,71 @@ export default function Why() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center lg:text-left">
             <a href="https://apnt.app/anna_dreamshine" target="_blank">
               <Button>Записаться на консультацию</Button>
             </a>
           </div>
+        </div>
+
+        {/* DESKTOP */}
+        <div className="hidden lg:block h-[900px] overflow-hidden relative pl-6">
+
+          <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#f8f6f2] to-transparent z-10" />
+          <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#f8f6f2] to-transparent z-10" />
+
+          <div className="flex flex-col gap-6 animate-vertical">
+            {[...comments, ...comments].map((src, i) => (
+              <Image
+                key={i}
+                src={src}
+                alt="отзыв"
+                width={260}
+                height={140}
+                className="rounded-xl shadow-md object-cover w-full"
+              />
+            ))}
+          </div>
 
         </div>
+
+        {/* MOBILE */}
+        <div className="mt-16 lg:hidden">
+
+          <div
+            ref={sliderRef}
+            onScroll={handleScroll}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory px-1 no-scrollbar"
+          >
+            {comments.map((src, i) => (
+              <div key={i} className="snap-start flex-shrink-0 w-[80%]">
+                <Image
+                  src={src}
+                  alt="отзыв"
+                  width={300}
+                  height={160}
+                  className="rounded-xl shadow-md object-cover w-full"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* ТОЧКИ */}
+          <div className="flex justify-center gap-2 mt-4">
+            {comments.map((_, i) => (
+              <div
+                key={i}
+                className={`h-2 rounded-full transition-all ${
+                  i === active
+                    ? "bg-[#4c4a4a] w-5"
+                    : "bg-[#d6d3cd] w-2"
+                }`}
+              />
+            ))}
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
