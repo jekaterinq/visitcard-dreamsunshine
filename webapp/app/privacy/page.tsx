@@ -1,7 +1,27 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Privacy() {
+  const router = useRouter();
+
   return (
     <section className="py-24 bg-[#f8f6f2]">
       <div className="max-w-3xl mx-auto px-4">
+
+        {/* 🔙 КНОПКА НАЗАД (как раньше) */}
+        <button
+          onClick={() => {
+            if (window.history.length > 1) {
+              router.back();
+            } else {
+              router.push("/");
+            }
+          }}
+          className="fixed top-4 left-4 z-50 bg-white rounded-full px-4 py-2 shadow"
+        >
+          ← Назад
+        </button>
 
         <h1 className="text-3xl md:text-4xl font-medium text-[#1f1f1f]">
           Политика конфиденциальности
@@ -75,11 +95,10 @@ export default function Privacy() {
             <p className="mt-2">
               По вопросам обработки данных:
               <a
-                href="https://www.instagram.com/dreamshine_studio/"
-                target="_blank"
-                className="ml-2 text-[#7a9c8f] hover:underline"
+                href="mailto:anshine.studio@gmail.com"
+                className="ml-2 text-[#8e947f] hover:underline font-medium"
               >
-                @dreamshine_studio
+                anshine.studio@gmail.com
               </a>
             </p>
           </div>

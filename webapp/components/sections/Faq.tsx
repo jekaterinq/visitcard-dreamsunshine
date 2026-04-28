@@ -45,7 +45,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-24 bg-[#f8f6f2] relative overflow-hidden">
+    <section id="faq" className="py-24 bg-[#f8f6f2] relative overflow-hidden">
 
       {/* LEFT */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
