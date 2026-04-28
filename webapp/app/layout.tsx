@@ -1,10 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Анна | Косметолог",
-  description: "Уход за кожей и консультации",
+  title: "Анна | Косметолог-нутрициолог",
   icons: {
-    icon: "images/main-icon-2.png", // файл в public
+    icon: "images/main-icon.png", // файл в public
   },
 };
 
